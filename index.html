@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Liller photo</title>
+        <link rel="stylesheet" href="normalize.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Neonderthaw&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header id="mainHeader">
+            <div class="logo"> <img  src="Marron Laurier Agriculture Logo.png" /></div>
+            <h1 class="accessibility">REAL PHOTOS, JUST LIKE YOU! </h1>
+            <nav id="mainNav">
+                  <ul>
+                    <li><a href="/" >Home</a></li>
+                    <li><a href="galleries.html" >Gallery </a></li>
+                    <li><a href="about.html" >About</a></li>
+                    <li><a href="contact.html" >Contact</a></li>
+                  </ul>
+                
+                
+            </nav>
+        </header><!--Ici se termine le #mainHeader-->
+        <section id="pageContent">
+            <div class="slidesshow-container">
+                <div class="wedding-photos">
+                    <img src="jonathan-borba-eg-72fI9wK4-unsplash.jpg" style="width:100%">  
+                </div>
+                <div class="wedding-photos">
+                    <img src="Sam-Peyton-Engagements-114.jpg" style="width:100%">  
+                </div>
+                <div class="wedding-photos">
+                    <img src="Jack+Michelle_Engagement-Previews001.jpg" style="width:100% ">  
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+               <span class="dot" onclick="currentSlides(1)"></span>
+               <span class="dot" onclick="currentSlides(2)"> </span> 
+               <span class="dot" onclick="currentSlides(3)"> </span>  
+             </div> 
+             
+            
+        </section><!--Ici se termine le #pageContent-->
+        <footer id="mainFooter">
+            <p>&copy; LILLER PHOTO 2022</p>
+        </footer><!--Ici se termine le #mainFooter-->
+        <script src="script.js"></script>
+    </body>
+</html>

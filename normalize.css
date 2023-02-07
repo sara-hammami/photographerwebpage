@@ -1,0 +1,398 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+
+
+body {
+  margin: 0;
+  background-color:white;
+  
+}
+.logo{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img{
+  width:400px;
+  height:350px;
+  margin-top:-40px ;
+}
+.accessibility{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  font-weight: 300;
+  text-align: center;
+  color:rgb(222, 158, 172);
+  margin-top:-50px;
+
+}
+
+nav{
+  display:flex;
+  align-items: center;
+  justify-content:space-around;
+}
+#mainNav ul li {
+  list-style: none;  
+  display:inline-block;
+  padding: 10px 70px ;
+}
+#mainNav  ul li a {
+  text-decoration: none;
+  font-weight: 200;
+  font-size:18px;
+  color: rgb(171, 143, 153);
+  font-family: "poppins", sans-serif;
+  padding: 0 10 px;
+  border-radius:3px;
+}
+
+#mainNav  ul li a:hover{
+  color:rgb(223, 181, 190);
+  transition: .3s;
+}
+
+.wedding-photos{
+  display: none;
+}
+.wedding-photo img{
+  vertical-align: middle;
+}
+.slidesshow-container  {
+  max-width:80%;
+  margin:auto;
+  position: relative;
+}
+.next , .prev{
+ cursor:pointer;
+ position:absolute;
+ top:50%;
+ width:auto;
+ padding:16px;
+ margin-top: -22px;
+ color:white;
+ font-weight: bold;
+ font-size:18px;
+ transition:0.6s ease;
+ border-radius: 0 3px 3px 0;
+ user-select:none;
+}
+.next{
+  right:0;
+  border-radius:  3px 0 0 3px;
+}
+.prev:hover , .next:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+.dot{
+  cursor:pointer;
+  height:15px;
+  width:15px;
+  margin:0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display:inline-block;
+  transition:background-color 0.6s ease;
+}
+.active , .dot:hover{
+  background-color:rgb(222, 158, 172); ;
+}
+#mainFooter p{
+  text-align: center;
+  vertical-align: middle;
+  font-family:'Montserrat', sans-serif ;
+  font-size: 15px;
+  color:rgb(206, 130, 146); ;
+}
+.content{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  text-align:center;
+  margin:40px 20px 0 20px;
+}
+.content #heading{
+  width:50%;
+}
+.content h1{
+  font-size:2em;
+  font-weight: bolder;
+  border-bottom: 3px solid  rgb(210, 161, 172) ;
+  color:rgb(184, 132, 150);
+  font-family: 'Montserrat', sans-serif ;
+  
+}
+.content .box{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+ 
+}
+.content .box .dream{
+  display:flex;
+  flex-direction: column;
+  width:32.5%
+}
+.content .box .dream img{
+  width:100%;
+  padding-bottom:15px;
+  border-radius:5px;
+}
+.contact{
+  /*position:relative;*/
+  min-height:100vh;
+  padding:50px 100px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  
+}
+.contact .contactform{
+  max-width:800px;
+  text-align: center;
+}
+.contact .contactform h2{
+  font-size: 36px;
+  font-weight: 500;
+  color:rgb(187, 137, 165) ;
+  font-family: 'Montserrat', sans-serif ;
+}
+.contact .contactform p{
+  font-weight: 300;
+  color:rgb(187, 137, 165) ;
+  font-family:'Montserrat', sans-serif ;
+}
+.contactform{
+  width:100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+
+
+}
+.container{
+ width:50%;
+ display: flex;
+ flex-direction: column;
+ 
+}
+.container img{
+  border-radius: 5px;
+  float: left;
+}
+.formbox{
+  width:40%;
+  padding:40px;
+  background: #fff;
+}
+.formbox .inputbox{
+  position:relative;
+  width:100%;
+  margin-top: 10px;
+}
+.formbox .inputbox input , .formbox .inputbox textarea {
+  width: 100%;
+  padding:10px 0 ;
+  font-size: 1em;
+  color:rgb(41, 41, 41);
+  /*margin: 10px 0 ;*/
+  /*outline: 0;
+  box-shadow: none;
+  border: 1px solid var*/
+  border:none;
+  border-bottom: 1px solid rgb(128, 100, 117);
+  outline: none;
+}
+.formbox .inputbox   input +label , .formbox .inputbox  textarea +label{
+  /*position:absolute;
+  left:0;
+  padding:5px 0;
+  font-size: 16px;
+  margin:10px 0 ;
+  margin-bottom: 80px;*/
+  position: absolute;
+  left:0;
+  pointer-events:none;
+  transition:0.5s;
+  color:rgb(184, 152, 167);
+  font-size:16px;
+  margin-top: -1.5em;
+  display: block;
+  pointer-events: none;
+
+}
+.formbox .inputbox input   +label:before , .formbox .inputbox textarea +label:before{
+  content:attr(placeholder);
+  display :inline-block;
+  color:rgb(154, 118, 135) ;
+  transition:all .3s ease-in-out;
+
+}
+.formbox .inputbox input:focus +label:before, .formbox .inputbox textarea:focus +label:before{
+  color:#cb7291b4;
+  font-size: 18px;
+  transform:translate(0,-1.2em) scale(0.7,0.7);
+}
+#frmContact button{
+  width:30%;
+  background: rgb(153, 116, 116);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  padding:15px;
+  font-size: 18px;
+  margin:10px
+}
+.about{
+  width:100%;
+  padding:78px 0px;
+}
+.about .main #photographer{
+ 
+  height:auto;
+  width:420px;
+  border-radius: 2px;
+
+}
+.about-text{
+  width:550px;}
+.main{
+ width:1130px;
+ max-width:95%;
+ margin:0 auto;
+ display: flex; 
+ align-items: center;
+ justify-content: space-around;
+}
+.about-text h1{
+  font-family:'Montserrat', sans-serif ;
+  color:rgb(187, 137, 165);
+  font-size: 80px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.about-text p{
+  color:grey;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 17px;
+  margin-bottom: 45px;
+  font-family:'Josefin Sans', sans-serif;
+}
+.results{
+  text-align: center;
+  margin-top:20px;
+}
+.results img{
+  width:45em;  
+}
+.social-media{
+  text-align: center;
+  margin:50px;
+}
+.social-media i{
+  color:rgb(171, 143, 153);
+  font-size:25px;
+  padding:0px 10px;
+}
+.social-media i:hover{
+  color:rgb(223, 181, 190);
+}
+.oneCol-text{
+  display: block;
+  margin:auto; 
+}
+.oneCol-text main  h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size:2em;
+  font-weight: bolder;
+  color:rgb(184, 132, 150);
+  font-family: 'Montserrat', sans-serif ;
+  text-transform: uppercase;
+}
+.oneCol-text main hr{
+  width:50%;
+  color: rgb(109, 108, 108);
+  size:7px;
+  
+}
+ .content1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.content1 img {
+  width:40%;
+  border-radius: 2px;
+  margin:10px;
+}
+.content1 p{
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  width:25%;
+  margin:10px;
+  text-align: justify;
+}
+
+@media only screen and (max-width:769px){
+  .content .box{
+    flex-direction: column;
+  }
+  .content .box .dream{
+    width:100%;
+  }
+  .content #heading{
+    width:100%;
+  }
+  .content h1{
+    font-size:1em;
+    
+  }
+  .contact{
+    padding:50px;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .main{
+    width:100%;
+    display: block;
+    margin:auto;
+   
+   }
+   .about .main #photographer{
+    height:auto;
+    width:100%;
+    display: block;
+    margin:auto;
+   }
+   .social-media {
+    text-align: center;
+  }
+  .results img{
+    width:100;
+    display: block;
+    margin: auto;
+  }
+}
